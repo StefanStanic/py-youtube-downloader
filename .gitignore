@@ -1,0 +1,7 @@
+#exclude everything in folder
+mp3-files/*
+
+#exc
+!mp3-files/.gitkeep
+
+.DS_Store
