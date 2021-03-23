@@ -35,6 +35,7 @@ def yt_downloader(urls_to_download):
             'preferredcodec': 'mp3',
             'preferredquality': '192',    
         }],
+        'autonumber_start': 195,
         'logger': MyLogger(),
         'progress_hooks': [done_hook],
         'outtmpl': os.getcwd() + '/mp3-files/%(autonumber)s-%(title)s.%(ext)s',
