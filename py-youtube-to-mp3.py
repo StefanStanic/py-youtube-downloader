@@ -35,7 +35,7 @@ def yt_downloader(urls_to_download):
             'preferredcodec': 'mp3',
             'preferredquality': '192',    
         }],
-        'autonumber_start': 216,
+        'autonumber_start': 978,
         'logger': MyLogger(),
         'progress_hooks': [done_hook],
         'outtmpl': os.getcwd() + '/mp3-files/%(autonumber)s-%(title)s.%(ext)s',
@@ -43,7 +43,10 @@ def yt_downloader(urls_to_download):
     }
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-        ydl.download(urls_to_download)
+        try:
+            ydl.download(urls_to_download)
+        except:
+            print('error')
 
 
 def main():
